@@ -55,19 +55,36 @@
 }
 
 .firstContainer {
-    height: 75vh;
-    width: 40vw;
-    border-radius: 15px;
-    background-color: #bebebe;
+    display: flex;
+    box-shadow: -5px 5px #6a51a8;
+    justify-content: center;
+    height: fit-content;
+    height: 75%;
+    width: 40%;
+    border-radius: 10px;
+    background-color:#8b72cf;
     margin: 25px;
+    padding: 15px;
 
-    &__avisos {}
+    &__avisos {
+        display: flex;
+    img{
+        border-radius: 5px;
+    width: 100%;
+}
+    }
 }
 
 .secondContainer {
-    height: 75vh;
-    width: 40vw;
-    border-radius: 15px;
-    background-color: #bebebe;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    height: 75%;
+    width: 40%;
+    border-radius: 10px;
+    background-color:#8b72cf;
     margin: 25px;
+    padding: 15px;
+    box-shadow: 5px 5px #6a51a8;
+    
 }

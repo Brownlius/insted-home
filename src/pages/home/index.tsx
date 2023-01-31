@@ -25,7 +25,7 @@ export default function Home() {
             <main className={style.main} >
                 <div className={style.firstContainer} >
                     <div className={style.firstContainer__avisos} >
-                        <img src={url} alt= "123" />
+                        <img src={require('../../assets/informativo_1.png')}  alt="123"/>
                     </div>
                 </div>
                 <div className={style.secondContainer} >
