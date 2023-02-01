@@ -1,6 +1,11 @@
+.body{
+    display: flex;
+    flex-direction: column;
+
 .header {
     display: flex;
-    justify-content: center;
+    height: fit-content;
+    justify-content: space-between;
     padding: 0 50px;
     flex-direction: row;
     background-color: black;
@@ -50,41 +55,65 @@
 
 .main {
     display: flex;
-    height: 100vh;
-    justify-content: space-around;
-}
-
-.firstContainer {
-    display: flex;
-    box-shadow: -5px 5px #6a51a8;
     justify-content: center;
-    height: fit-content;
-    height: 75%;
-    width: 40%;
-    border-radius: 10px;
-    background-color:#8b72cf;
-    margin: 25px;
-    padding: 15px;
+    flex-direction: column;
 
-    &__avisos {
+    .quick_avisos {
         display: flex;
-    img{
-        border-radius: 5px;
-    width: 100%;
-}
+        width: calc(100% - 100px);
+        margin: 0 auto;
+        justify-content: center;
+        background-color: #149FA3;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
-}
 
-.secondContainer {
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-    height: 75%;
-    width: 40%;
-    border-radius: 10px;
-    background-color:#8b72cf;
-    margin: 25px;
-    padding: 15px;
-    box-shadow: 5px 5px #6a51a8;
-    
-}
+    .container_avisos {
+        display: flex;
+        justify-content: space-around;
+        padding: 25px;
+        flex-direction: row;
+
+        &__firstContainer {
+            display: flex;
+            box-shadow: -5px 5px #107c80;
+            height: 75%;
+            width: 40%;
+            border-radius: 10px;
+            background-color: #8b72cf;
+            padding: 15px;
+
+            &__avisos {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        &__secondContainer {
+            display: flex;
+            box-shadow: -5px 5px #107c80;
+            height: 75%;
+            width: 40%;
+            border-radius: 10px;
+            background-color: #484898;
+            padding: 15px;
+
+            &__avisos {
+                display: flex;
+
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}}
