@@ -1,10 +1,13 @@
 import style from './home.module.scss'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation, Pagination } from 'swiper';
+
 
 export default function Home() {
 
     return (
-        <body className={style.body}>
+        <main className={style.main} >
             <header className={style.header}>
                 <div className={style.header__logo}>
                     <Logo />
@@ -21,24 +24,22 @@ export default function Home() {
                     </ul>
                 </nav>
             </header>
-            <main className={style.main} >
-                <div className={style.quick_avisos}>
-                    TESTE
-                </div>
-                <div className={style.container_avisos}>
-                    <div className={style.container_avisos__firstContainer} >
-                        <div className={style.container_avisos__firstContainer__avisos} >
-                            <img src={require('../../assets/informativo_1.png')} alt="123" />
-                        </div>
-                    </div>
-                    <div className={style.container_avisos__secondContainer} >
-                        <div className={style.container_avisos__secondContainer__avisos} >
-
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    className={style.container_avisos}
+                    loop={true}
+                    spaceBetween={5}
+                    autoplay={{ delay: 5000, disableOnInteraction: false, waitForTransition: true }}
+                    speed={600}
+                    slidesPerView={1}
+                >
+                    <SwiperSlide className={style.container_avisos__avisos} >
+                        <img src={require('../../assets/informativo_3.png')} alt="123" />
+                    </SwiperSlide>
+                    <SwiperSlide className={style.container_avisos__avisos} >
                         <img src={require('../../assets/informativo_2.png')} alt="123" />
-                        </div>
-                    </div>
-                </div>
+                    </SwiperSlide>
+                </Swiper>
             </main>
-        </body >
     )
 }
