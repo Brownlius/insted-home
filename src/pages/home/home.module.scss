@@ -53,14 +53,30 @@
         }
     }
 
-    .quick_avisos {
+    .container_ultimos_avisos {
         display: flex;
-        width: calc(100% - 100px);
+        width: 75%;
         margin: 0 auto;
-        justify-content: center;
-        background-color: #149FA3;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        margin-bottom: 10px;
+
+        &__titulo {
+            border-top: solid 3px #108185;
+            text-align: center;
+            width: 30%;
+            padding: 8px;
+            font-weight: 700;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: #149FA3;
+        }
+
+        &__avisos {
+            
+            padding-left: 8px;
+            margin: auto 0;
+            color: black;
+            
+        }
     }
 
     .container_avisos {
@@ -70,11 +86,13 @@
         background-color: #8b72cf;
         width: 40vw;
         height: 100%;
+
         &__avisos {
             width: 100%;
             height: 40vh;
             display: flex;
             flex-direction: row;
+
             img {
                 width: 80%;
                 object-fit: contain;
