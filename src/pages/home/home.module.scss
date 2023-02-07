@@ -1,9 +1,15 @@
 .main {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    background-color: rgb(216, 229, 233);
 
     .header {
         display: flex;
+        width: 90%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin: 0 auto;
         height: fit-content;
         justify-content: space-between;
         padding: 0 50px;
@@ -81,28 +87,47 @@
 
     .principal {
         display: flex;
+        flex-direction: row;
+        justify-items: center;
+
+        height: 70vh;
+
         .container_avisos {
             display: flex;
-            
+            width: 40%;
             background-color: #8b72cf;
-            border-radius: 10px;
-            width: 35vw;
-            padding: 20px;
+            border-radius: 5px;
+            padding: 10px;
 
             &__avisos {
-                width: 100%;
-                justify-content: center;
-                height: 40vh;
                 display: flex;
-                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                object-fit: contain;
 
                 img {
-                    width: 80%;
+                    box-shadow: -5px 5px 15px #6e5ba4;
+                    border-radius: 5px;
+                }
+            }
+
+
+        }
+
+        .container_botoes {
+            display: flex;
+            width: 40%;
+            justify-content: start;
+            .container_botoes__dois {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 40%;
+                &__botoes {
                     
-                    object-fit: contain;
+                       
                 }
             }
         }
-
     }
 }

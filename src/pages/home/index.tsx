@@ -59,10 +59,22 @@ export default function Home() {
                     </SwiperSlide>
                 </Swiper>
                 <section
-                    className={style.container_avisos}
-                   
+                    className={style.container_botoes}
                 >
-                    
+                    <div className={style.container_botoes__dois}>
+                        <img className={style.container_botoes__dois__botoes}
+                            src={require('../../assets/botoes/insted_botao-site_inscricao_DIPLOMA.png')} alt=" " />
+
+                        <img className={style.container_botoes__dois__botoes}
+                            src={require('../../assets/botoes/insted_botao-site_inscricao_NOTA-ENEM.png')} alt=" " />
+                    </div>
+                    <div className={style.container_botoes__dois}>
+                        <img className={style.container_botoes__dois__botoes}
+                            src={require('../../assets/botoes/insted_botao-site_inscricao_TRANSFERENCIA.png')} alt=" " />
+
+                        <img className={style.container_botoes__dois__botoes}
+                            src={require('../../assets/botoes/insted_botao-site_inscricao-PROVA-ONLINE.png')} alt=" " />
+                    </div>
                 </section>
             </section>
         </main >
