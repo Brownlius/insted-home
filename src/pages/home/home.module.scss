@@ -1,8 +1,9 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    background-color: rgb(216, 229, 233);
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #d8e5e9;
 
     .header {
         display: flex;
@@ -48,7 +49,7 @@
             }
 
             li:hover {
-                border-bottom: 3px solid #8b72cf;
+                border-bottom: 3px solid #108185;
                 cursor: pointer;
             }
 
@@ -61,16 +62,18 @@
 
     .container_ultimos_avisos {
         display: flex;
-        width: 75%;
-        margin: auto;
-        margin-bottom: 10px;
+        width: 65%;
+        margin: 0 auto;
+        margin-bottom: 1%;
 
         &__titulo {
-            border-top: solid 3px #108185;
+            border-top: solid 4px #108185;
             text-align: center;
+            box-sizing: content-box;
             width: 30%;
-            padding: 8px;
+            padding: 10px;
             font-weight: 700;
+            font-size: 1.5rem;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             background-color: #149FA3;
@@ -79,7 +82,9 @@
         &__avisos {
 
             padding-left: 8px;
-            margin: auto 0;
+            font-size: 1.25rem;
+            text-align: start;
+            align-self: center;
             color: black;
 
         }
@@ -88,16 +93,17 @@
     .principal {
         display: flex;
         flex-direction: row;
-        justify-items: center;
-
+        align-self: center;
+        width: 90%;
         height: 70vh;
 
         .container_avisos {
             display: flex;
-            width: 40%;
+            width: 50%;
+            margin: 0 50px;
             background-color: #8b72cf;
             border-radius: 5px;
-            padding: 10px;
+            padding: 1%;
 
             &__avisos {
                 display: flex;
@@ -106,7 +112,7 @@
                 object-fit: contain;
 
                 img {
-                    box-shadow: -5px 5px 15px #6e5ba4;
+                    box-shadow: -5px 5px 10px #6e5ba4;
                     border-radius: 5px;
                 }
             }
@@ -114,20 +120,72 @@
 
         }
 
-        .container_botoes {
+        .botoes {
             display: flex;
-            width: 40%;
-            justify-content: start;
-            .container_botoes__dois {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                width: 40%;
-                &__botoes {
-                    
-                       
+            flex-direction: column;
+            align-self: center;
+            width: 50%;
+            padding: 5px;
+            border-radius: 5px;
+
+            height: fit-content;
+            margin: 0 50px;
+
+            &__titulo {
+                align-self: center;
+                width: 85%;
+
+                img {
+                    width: 100%;
                 }
             }
+
+            &__container {
+                display: flex;
+                flex-direction: row;
+
+                &__dois {
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        align-self: center;
+                        margin: 5px 0;
+                        border-radius: 13px;
+                        box-shadow: -5px 5px 10px rgba(16, 29, 33, 0.2);
+                        width: 95%;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .nossos_cursos {
+        display: flex;
+        margin: 25px 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: black;
+
+        &__titulo {
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto 5px auto;
+            text-transform: uppercase;
+            color: #494898;
+            background-color: #d8e5e9;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 3rem;
+        }
+
+        &__texto {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            text-align: center;
         }
     }
 }
