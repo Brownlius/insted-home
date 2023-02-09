@@ -49,8 +49,10 @@
             }
 
             li:hover {
-                border-bottom: 3px solid #108185;
+                font-weight: 600;
+                color: #149FA3;
                 cursor: pointer;
+                transition: color 0.5s;
             }
 
             li:first-child {
@@ -69,11 +71,11 @@
         &__titulo {
             border-top: solid 4px #108185;
             text-align: center;
-            box-sizing: content-box;
-            width: 30%;
+            white-space: nowrap;
+            min-width: 20%;
             padding: 10px;
-            font-weight: 700;
-            font-size: 1.5rem;
+            font-weight: 600;
+            font-size: 1.35rem;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             background-color: #149FA3;
@@ -125,9 +127,7 @@
             flex-direction: column;
             align-self: center;
             width: 50%;
-            padding: 5px;
             border-radius: 5px;
-
             height: fit-content;
             margin: 0 50px;
 
@@ -135,8 +135,9 @@
                 align-self: center;
                 width: 85%;
 
-                img {
+                img {    
                     width: 100%;
+
                 }
             }
 
@@ -150,7 +151,7 @@
 
                     img {
                         align-self: center;
-                        margin: 5px 0;
+                        margin: 10px 0;
                         border-radius: 13px;
                         box-shadow: -5px 5px 10px rgba(16, 29, 33, 0.2);
                         width: 95%;
