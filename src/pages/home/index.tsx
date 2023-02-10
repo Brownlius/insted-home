@@ -1,12 +1,17 @@
 import style from './home.module.scss';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
+import { useRef } from 'react';
 import '/node_modules/swiper/swiper-bundle.css';
 import { Autoplay, Navigation, Pagination } from 'swiper';
+import 'swiper/css/navigation';
+
 
 
 export default function Home() {
+
+    const swiperNavPrevRef = useRef(null);
+    const swiperNavNextRef = useRef(null);
 
     return (
         <main className={style.main}>
@@ -28,13 +33,17 @@ export default function Home() {
             </header>
             <div className={style.container_ultimos_avisos}>
                 <h2 className={style.container_ultimos_avisos__titulo}>Últimas notícias</h2>
-                <Swiper className={style.container_ultimos_avisos__avisos}
+                <Swiper
+
                     modules={[Navigation, Pagination, Autoplay]}
-                    loop={true}
-                    spaceBetween={5}
-                    autoplay={{ delay: 5000, disableOnInteraction: false, waitForTransition: true }}
+                    navigation
                     speed={650}
-                    slidesPerView={1}>
+                    slidesPerView={1}
+                    loop
+                    className={style.container_ultimos_avisos__avisos}
+                    autoplay={{ delay: 5000, disableOnInteraction: false, waitForTransition: true }}
+
+                >
                     <SwiperSlide>
                         <p>Novo site Insted</p>
                     </SwiperSlide>
@@ -48,10 +57,17 @@ export default function Home() {
                     modules={[Navigation, Pagination, Autoplay]}
                     className={style.container_avisos}
                     loop={true}
+                    slidesPerView={1}
+                    pagination
+                    navigation={
+                        {
+                            prevEl: swiperNavPrevRef.current,
+                            nextEl: swiperNavNextRef.current
+                        }}
                     spaceBetween={5}
                     autoplay={{ delay: 6500, disableOnInteraction: false, waitForTransition: true }}
                     speed={600}
-                    slidesPerView={1}
+
                 >
                     <SwiperSlide className={style.container_avisos__avisos} >
                         <img src={require('../../assets/informativo_1.png')} alt="123" />
@@ -60,6 +76,8 @@ export default function Home() {
                         <img src={require('../../assets/informativo_3.png')} alt="123" />
                     </SwiperSlide>
 
+                    <div className={style.setaEsq} ref={swiperNavPrevRef}></div>
+                    <div className={style.setaDir} ref={swiperNavNextRef}></div>
                 </Swiper>
                 <section className={style.botoes} >
                     <div className={style.botoes__titulo}>
